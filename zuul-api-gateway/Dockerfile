@@ -1,9 +1,10 @@
 FROM maven as build
-MAINTAINER sarat.e99@gmail.com Sarat Chandra E
+//MAINTAINER sarat.e99@gmail.com Sarat Chandra E
 
 
 WORKDIR /app
 COPY . .
+RUN yum install -y maven
 RUN mvn install
 
 #jdk
