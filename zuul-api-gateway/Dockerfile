@@ -4,7 +4,6 @@ FROM maven as build
 
 WORKDIR /app
 COPY . .
-RUN yum install -y maven
 RUN mvn install
 
 #jdk
